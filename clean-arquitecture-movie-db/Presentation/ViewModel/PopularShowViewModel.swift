@@ -21,9 +21,11 @@ class PopularShowViewModel: ObservableObject {
         Task {
             do {
                 let shows = try await getPopularTvShowUseCase.execute()
+                
                 await MainActor.run {
                     self.shows = shows
                 }
+                
             } catch {
                 print("Error: \(error)")
             }

@@ -10,12 +10,11 @@ import Foundation
 
 struct TvShowDetail: Codable {
     let name: String
+    let genres: [Genres]
     let overview: String
-    let gender: [Gender]
-    let posterPath: String?
-    let backdropPath: String?
 }
 
-struct Gender: Codable {
+struct Genres: Codable, Identifiable {
+    let id: Int
     let name: String
 }
