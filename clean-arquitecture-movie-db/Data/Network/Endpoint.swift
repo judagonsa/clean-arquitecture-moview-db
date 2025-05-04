@@ -14,7 +14,7 @@ enum HTTMethod: String {
 
 enum Endpoint {
     case popularShows
-    case tvshowDetails(id: Int)
+    case tvShowDetails(id: Int)
     
     var url: URL {
         let baseUrl = "https://api.themoviedb.org/3"
@@ -23,7 +23,7 @@ enum Endpoint {
         switch self {
             case .popularShows:
                 return URL(string: "\(baseUrl)/tv/popular?api_key=\(apiKey)&language=es_ES&page=1")!
-            case .tvshowDetails(let id):
+            case .tvShowDetails(let id):
                 return URL(string: "\(baseUrl)/tv/\(id)?api_key=\(apiKey)&language=es_ES")!
         }
     }

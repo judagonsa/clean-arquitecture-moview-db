@@ -10,7 +10,7 @@ import Foundation
 
 //Codable, JSON
 
-struct TvShowResponse: Codable {
+struct TvShowPopularResponse: Codable {
     let results: [TvShow]
 }
 
