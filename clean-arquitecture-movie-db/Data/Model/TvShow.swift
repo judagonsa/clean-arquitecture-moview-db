@@ -17,6 +17,6 @@ struct TvShowPopularResponse: Codable {
 struct TvShow: Codable {
     let id: Int
     let name: String
-    let first_air_date: Date
+    let first_air_date: String
     let vote_average: Double
 }
